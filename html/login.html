@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	    <title>MyScanShare</title>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="lib/semantic-ui/responsive-semantic-ui.css">
+	    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+
+	    <link rel="stylesheet" type="text/css" href="css/lib.css">
+	    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+	    <script type="text/javascript" src="js/main.js"></script>
+	</head>
+
+	<body>
+		<div id="login-register-box">
+			<img id="login-logo" src="images/logo_MSS_En.png" alt="">
+			<h1>Login</h1>
+			<div class="social-login-box">
+				<button class="ui facebook button">
+					Log in with <img src="images/facebook.png" alt="">
+				</button>
+				<button class="ui kakao button">
+					Log in with <img src="images/kakaotalk.png" alt="">               
+				</button>
+				<button class="ui google button">
+					Log in with <img src="images/google.png" alt="">               
+				</button>
+			</div>
+
+			<form action="" class="ui form">
+				<div class="field">
+					<label>Your Email or Phone Number </label>
+					<input type="text" name="username">
+				</div>
+
+				<div class="field">
+					<label>Password <a href="#" class="forgot-password">Forgot?</a></label>
+					<input type="password" name="password">
+				</div>
+
+				<button class="ui button" type="submit">Sign in</button>
+			</form>
+
+			<div class="action">
+				Not a member? <a href="#"> Sign up now</a>
+			</div>
+		</div>
+
+		<div id="login-register-box-message">
+			<div class="ui container">
+				<p>We couldn't find an account matching the email and password you entered.</p>
+				<p>Please ceck your email and password and try again.</p>
+			</div>
+		</div>
+
+		<div id="language-selected">
+			Language
+		</div>
+	</body>
+
+</html>
