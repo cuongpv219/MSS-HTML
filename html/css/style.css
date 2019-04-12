@@ -123,6 +123,99 @@
 }
 
 
+#front-header {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    z-index: 9999;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+
+#front-wrapper {
+    padding-top: 80px;
+}
+
+#front-header>.ui.container {
+    display: flex;
+    align-items: center;
+    height: 75px;
+}
+
+#front-header-logo {
+    margin-right: 40px;
+}
+
+#front-header-logo img {
+    width: 200px;
+}
+
+.logo-white {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    #front-header>.ui.container {
+        height: 60px;
+    }
+
+    #front-header-logo img {
+        width: 150px;
+    }
+
+    .front-menu-nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        width: 100% !important;
+        display: none;
+        background: #fff;
+    }
+
+    #front-header-logo {
+        margin-right: 0px;
+    }
+
+    .front-menu-user-info {
+        margin-left: 0px;
+        text-align: right !important;
+    }
+
+    .front-menu-nav .item {
+        display: block;
+        padding: 15px 0px 15px 40px;
+        position: relative;
+        border-bottom: 1px solid #707070;
+    }
+
+    .front-menu-nav .item:before {
+        position: absolute;
+        content: '\203A';
+        font-size: 24px;
+        left: 15px;
+        top: 12px;
+        font-weight: bold;
+        color: #636363;
+    }
+
+    #front-mobile-bars i {
+        font-size: 24px;
+        color: #757575;
+        cursor: pointer;
+    }
+
+    .front-menu-nav .item:hover {
+        background: #f6f6f6;
+        color: #ff9500;
+    }
+
+    .front-header-item {
+        width: 33.333%;
+    }
+}
 @media only screen and (max-width: 768px) {
     #login-register-box {
         padding: 20px;
@@ -144,6 +237,18 @@
     #login-register-box form input[type='password'],
     #login-register-box form button {
     	padding: 10px 20px;
+    }
+
+    #front-mobile-bars {
+        width: 20%;
+    }
+
+    #front-header-logo {
+        width: 40%;
+    }
+
+    .front-menu-user-info {
+        width: 40% !important;
     }
 }
 

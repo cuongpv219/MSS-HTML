@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	    <title>MyScanShare</title>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	    <link rel="stylesheet" type="text/css" href="lib/semantic-ui/responsive-semantic-ui.css">
+	    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="lib/swiper-4.5.0/swiper.min.css">
+	    <link rel="stylesheet" type="text/css" href="css/lib.css">
+	    <link rel="stylesheet" type="text/css" href="css/list.css">
+		
+	    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+	    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+	    <script type="text/javascript" src="lib/swiper-4.5.0/swiper.min.js"></script>
+	    <script type="text/javascript" src="js/viewer.js"></script>
+	</head>
+
+	<body>
+		<div id="front-wrapper">
+			<div id="front-content">
+				<div id="viewer-modal" class="ui fullscreen modal">
+					<i class="close icon"></i>
+					<div class="ui container">
+						<div id="viewer-header" class="ui stackable grid">
+							<div class="three wide column">
+								<img src="images/logo_MSS_En.png" alt="">
+							</div>
+							<div class="seven wide column patient-info">
+								<div class='item'>Patient Name :<span> PNEUMATIX </span></div>
+								<div class='item'>Birthday :<span> 11 July 2000</span></div>
+								<div class='item'>Age :<span> 11y/-1m</span></div>
+								<div class='item'>Hospital :<span> Human Imaging Center</span></div>
+								<div class='item'>Modality :<span> MR</span></div>
+								<div class='item'>Body Part :<span> Head</span></div>
+								<div class='item'>Date Taken :<span> 16 November 2008</span></div>
+								<div class='item'>Number of Images :<span> 75 images</span></div>
+							</div>
+							<div class="six wide column">
+								<div class="swiper-container gallery-thumbs">
+									<div class="swiper-wrapper">
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							        </div>
+							        <div class="swiper-pagination"></div>	
+							    </div>
+							</div>
+						</div>
+						<div id="slider-container">
+							<div id="slider-wrapper">
+							
+								<div class="swiper-container gallery-top">
+							        <div class="swiper-wrapper">
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							            <div class="swiper-slide">
+							            	<img src="images/view-1.png" alt="">
+							            </div>
+							        </div>
+							        <div class="swiper-pagination"></div>
+							        <!-- Add Arrows -->
+							    </div>
+						        <div class="slider-next">
+						        	<i class="fas fa-chevron-right"></i>
+						        </div>
+						        <div class="slider-prev">
+						        	<i class="fas fa-chevron-left"></i>
+						        </div>
+						        <div class="slide-buttons">
+						        	<div>
+							        	<img src="images/icon_hpacs.png" alt="">
+						        	</div>
+						        		
+						        	<div>
+							        	<img src="images/icon_view_detail.png" alt="">
+						        	</div>
+						        </div>
+							</div>	
+
+							<div class="viewer-modal-content">
+						        <h3><img src="images/icon_medical_report.png" alt=""> Medical Report</h3>
+						        <div class="ui stackable grid">
+						        	<div class="eight wide column">
+						        		<p><span>Approval Date</span>Approval Date</p>
+						        		<p><span>Approval by</span>Jun Su Ryoung/Lee Jae Hee, M.D.</p>
+						        		<p><span>Hospital name</span>Human Medical Imaging Center</p>
+						        	</div>
+						        	<div class="six wide column">
+										<img src="images/icon_viewthereport.png" alt="">
+						        	</div>
+						        </div>
+					        </div>
+						</div>
+						<div id="viewer-modal-detail">
+							<div class="ui stackable grid">
+								<div class="eight wide column">
+									<div class="viewer-box">
+										<h4>
+											<img src="images/icons/clip.png" alt="">
+											3 Attached Files
+											<img class="img-align-right" src="images/icons/import_1.png" alt="">
+										</h4>
+										<div class="viewer-box-content">
+											<p class="border-bottom">
+												headimage.jpg
+												<img class="img-align-right" src="images/icons/waste_basket.png" alt="">
+											</p>
+											<p class="border-bottom">
+												headimage.jpg
+												<img class="img-align-right" src="images/icons/waste_basket.png" alt="">
+											</p>
+											<p>
+												headimage.jpg
+												<img class="img-align-right" src="images/icons/waste_basket.png" alt="">
+											</p>
+										</div>	
+									</div>
+									<div class="viewer-comment-box">
+										<h4>
+											<img src="images/icons/comment.png" alt="">
+											3 Comment
+											<img class="img-align-right" src="images/icons/comment_plus.png" alt="">
+										</h4>
+										<div class="item">
+											<img src="images/man.png" alt="">
+											<h5>Roan Chang</h5>
+											<p>Thank you for sharing your picture! I hope you are getting better. Take care~.</p>
+											<div class="created-time">2019/03/22  05:35 PM</div>
+										</div>
+										<div class="item">
+											<img src="images/man.png" alt="">
+											<h5>Roan Chang</h5>
+											<p>Thank you for sharing your picture! I hope you are getting better. Take care~.</p>
+											<div class="created-time">2019/03/22  05:35 PM</div>
+										</div>
+										<div class="item">
+											<img src="images/man.png" alt="">
+											<h5>Roan Chang</h5>
+											<p>Thank you for sharing your picture! I hope you are getting better. Take care~.</p>
+											<div class="created-time">2019/03/22  05:35 PM</div>
+										</div>
+									</div>
+								</div>
+								<div class="eight wide column">
+									<div class="viewer-box">
+										<h4>
+											<img src="images/icons/dose_report.png" alt="">
+											Dose Report
+											<img class="img-align-right" src="images/icons/report_plus.png" alt="">
+										</h4>
+										<div class="viewer-modal-content ui stackable grid">
+											<div class="fourteen wide column ">
+								        		<p><span>Approval Date</span>Approval Date</p>
+								        		<p><span>Approval by</span>Jun Su Ryoung/Lee Jae Hee</p>
+								        		<p><span>Hospital name</span>Human Medical Imaging Center</p>
+								        	</div>
+								        	<div class="two wide column">
+												<img src="images/icon_viewthereport.png" alt="">
+								        	</div>
+										</div>	
+									</div>
+
+									<div class="viewer-box">
+										<h4>
+											<img src="images/icons/icon_2nd.png" alt="">
+											2nd Opinion
+											<img class="img-align-right" src="images/icons/report_plus.png" alt="">
+										</h4>
+										<div class="viewer-box-content">
+											No file
+										</div>	
+									</div>
+
+									<div class="viewer-box">
+										<h4>
+											<img src="images/icons/height.png" alt="">
+											Expected Height Service
+											<img class="img-align-right" src="images/icons/report_plus.png" alt="">
+										</h4>
+										<div class="viewer-box-content">
+											No file
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
