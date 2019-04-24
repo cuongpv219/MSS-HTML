@@ -1,87 +1,632 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-	    <title>MyScanShare</title>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
-	    <link rel="stylesheet" type="text/css" href="lib/semantic-ui/responsive-semantic-ui.css">
-	    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+<head>
+    <title>MyScanShare</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="lib/semantic-ui/responsive-semantic-ui.css">
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/lib.css">
+    <link rel="stylesheet" type="text/css" href="css/list.css">
+    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="js/list.js"></script>
+</head>
 
-	    <link rel="stylesheet" type="text/css" href="css/lib.css">
-	    <link rel="stylesheet" type="text/css" href="css/style.css">
-		
-	    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
-	    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-	    <script type="text/javascript" src="js/main.js"></script>
-	</head>
-
-	<body>
-		<div id="front-wrapper">
-			<div id="front-header">
-	            <div class="front-logo-center computer only">
-	                <a href="#">
-	                    <!-- <img src="images/logo-white.png"> -->
-	                    <img src="images/logo-dark-blue.png">
+<body>
+    <div id="front-wrapper">
+        <div id="front-header">
+            <div class="ui container">
+                <div id="front-mobile-bars" class="front-header-item mobile tablet only">
+                    <i class="bars icon"></i>
+                </div>
+                <div id="front-header-logo" class="front-header-item">
+                    <a href="#">
+                        <img src="images/logo_MSS_En.png" alt="">
+                    </a>
+                </div>
+                <div class="front-header-item front-menu-nav">
+                    <a href="#" class="item active">MyScanShare</a>
+                    <a href="#" class="item">2nd Opinion</a>
+                    <a href="#" class="item">Expected Height</a>
+                    <a href="#" class="item">Dose Report</a>
+                    <a href="#" class=" mobile tablet only item">
+                    	<div class="ui menu-btn-1 button">
+							<img src="images/icons/icon_switch.png" alt="">
+		                	Family Account
+                    	</div>
 	                </a>
-	            </div> 
-	            <div class="ui container">
-	                <div id="front-mobile-bars" class="front-header-item mobile tablet only">
-	                    <i class="bars icon"></i>
+	                <a href="#" class="mobile tablet only item">
+                    	<div class="ui menu-btn-2 button">
+							<img src="images/icons/cm-plus.png" alt="">
+		                	Let Doctor See
+		                </div>
+	                </a>
+	                <div class="mobile tablet only item ">
+	                	<div class="ui menu-btn-3 selection dropdown ">
+		                    <input type="hidden" name="gender">
+		                    <i class="dropdown icon"></i>
+		                    <div class="default text">Language</div>
+		                    <div class="menu">
+		                        <div class="item" data-value="1">Vietnamese</div>
+		                        <div class="item" data-value="0">English</div>
+		                    </div>
+	                	</div>
 	                </div>
-	                <div id="front-header-logo" class="front-header-item">
-	                    <a href="#">
-	                        <img src="images/logo-dark-blue.png">
-	                    </a>
-	                </div>
-	                <div class="front-header-item front-menu-nav">
-	                    <a href="#" class="item active">Trang chủ</a>
-	                    <a href="#" class="item">Hướng dẫn</a>
-	                    <a href="#" class="item">Cuộc đua</a>
-	                    <a href="#" class="item">Bảng xếp hạng</a>
-	                    <a href="#" class="item">Big shop</a>
-	                </div>
-	                <div class="ui inline dropdown front-menu-user-info front-header-item">
+                </div>
+                <div class="right menu">
+	                <div class="ui dropdown front-menu-user-info front-header-item">
 	                    <div class="text">
 	                        <img class="ui avatar image" src="images/Group275.png">
-	                        <span class="computer tablet only">Jenny Hess</span>
 	                    </div>
-	                    <i class="dropdown icon"></i>
+	                    <i class="far fa-bell menu-notification-btn"></i>
 	                    <div class="menu">
+	                        <div class="item">New</div>
 	                        <div class="item">
-	                            <img class="ui avatar image" src="images/Group275.png">
-	                            Jenny Hess
+	                            <span class="description">ctrl + o</span>
+	                            Open...
 	                        </div>
 	                        <div class="item">
-	                            <img class="ui avatar image" src="images/Group275.png">
-	                            Elliot Fu
+	                            <span class="description">ctrl + s</span>
+	                            Save as...
 	                        </div>
 	                        <div class="item">
-	                            <img class="ui avatar image" src="images/Group275.png">
-	                            Stevie Feliciano
+	                            <span class="description">ctrl + r</span>
+	                            Rename
+	                        </div>
+	                        <div class="item">Make a copy</div>
+	                        <div class="item">
+	                            <i class="folder icon"></i>
+	                            Move to folder
 	                        </div>
 	                        <div class="item">
-	                            <img class="ui avatar image" src="images/Group275.png">
-	                            Christian
+	                            <i class="trash icon"></i>
+	                            Move to trash
 	                        </div>
+	                        <div class="divider"></div>
+	                        <div class="item">Download As...</div>
 	                        <div class="item">
-	                            <img class="ui avatar image" src="images/Group275.png">
-	                            Matt
+	                            <i class="dropdown icon"></i>
+	                            Publish To Web
+	                            <div class="menu">
+	                                <div class="item">Google Docs</div>
+	                                <div class="item">Google Drive</div>
+	                                <div class="item">Dropbox</div>
+	                                <div class="item">Adobe Creative Cloud</div>
+	                                <div class="item">Private FTP</div>
+	                                <div class="item">Another Service...</div>
+	                            </div>
 	                        </div>
-	                        <div class="item">
-	                            <img class="ui avatar image" src="images/Group275.png">
-	                            Justen Kitsune
-	                        </div>
+	                        <div class="item">E-mail Collaborators</div>
 	                    </div>
-	                </div>            
-	            </div>
-	        </div>
-		</div>
-		<div id="language-selected">
-			Language
-		</div>
-	</body>
+	                </div>
+	                <a href="#" class="ui menu-btn-1 button computer only ">
+						<img src="images/icons/icon_switch.png" alt="">
+	                	Family Account
+	                </a>
+	                <a href="#" class="ui menu-btn-2 button computer only ">
+						<img src="images/icons/cm-plus.png" alt="">
+	                	Let Doctor See
+	                </a>
+	                <div class="ui menu-btn-3 selection dropdown computer only ">
+	                    <input type="hidden" name="gender">
+	                    <i class="dropdown icon"></i>
+	                    <div class="default text">Language</div>
+	                    <div class="menu">
+	                        <div class="item" data-value="1">Vietnamese</div>
+	                        <div class="item" data-value="0">English</div>
+	                    </div>
+	                </div>
+                </div>
+            </div>
+        </div>
+        <div id="front-content">
+        	<div class="ui container front-list">
+        		<h1>My Scan List</h1>
+        		<div class="ui stackable grid">
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item">
+	        				<div class="thumbnail-box">
+	        					<img src="images/view-1.png" alt="">
+	        					<div class="top-left-icons">
+									<img src="images/icons/icon_shared.png" alt="">
+	        					</div>
+	        					<div class="top-right-icons">
+	        						<i class="far fa-check-circle"></i>
+	        					</div>
+	        					<div class="bottom-right-icons">
+	        						<button class="ui circular btn-eye icon button">
+										<img src="images/icons/icon_eye.png" alt="">
+									</button>
+									<button class="ui circular btn-share icon button">
+										<img src="images/icons/icon_share.png" alt="">
+									</button>
+									<button class="ui circular btn-hpacs icon button">
+										<img src="images/icons/icon_hpacs.png" alt="">
+									</button>
+									<button class="ui circular btn-download icon button">
+										<img src="images/icons/icon_download.png" alt="">
+									</button>
+									<button class="ui circular btn-more icon button">
+										<img src="images/icons/icon_more.png" alt="">
+									</button>
+	        					</div>
+	        				</div>
+        					<div class="ui grid content-box">
+        						<div class="row">
+	        						<div class="eight wide column">Patient Name</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item">
+	        				<div class="thumbnail-box">
+	        					<img src="images/view-1.png" alt="">
+	        					<div class="top-left-icons">
+									<img src="images/icons/icon_share_in.png" alt="">
+	        					</div>
+	        					<div class="top-right-icons">
+	        						<i class="far fa-check-circle"></i>
+	        					</div>
+	        					<div class="bottom-right-icons">
+	        						<button class="ui circular btn-eye icon button">
+										<img src="images/icons/icon_eye.png" alt="">
+									</button>
+									<button class="ui circular btn-share icon button">
+										<img src="images/icons/icon_share.png" alt="">
+									</button>
+									<button class="ui circular btn-hpacs icon button">
+										<img src="images/icons/icon_hpacs.png" alt="">
+									</button>
+									<button class="ui circular btn-download icon button">
+										<img src="images/icons/icon_download.png" alt="">
+									</button>
+									<button class="ui circular btn-more icon button">
+										<img src="images/icons/icon_more.png" alt="">
+									</button>
+	        					</div>
+	        				</div>
+        					<div class="ui grid content-box">
+        						<div class="row">
+	        						<div class="eight wide column">Patient Name</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item">
+	        				<div class="thumbnail-box">
+	        					<img src="images/view-1.png" alt="">
+	        					<div class="top-left-icons">
+									<img src="images/icons/icon_share_out.png" alt="">
+	        					</div>
+	        					<div class="top-right-icons">
+	        						<i class="far fa-check-circle"></i>
+	        					</div>
+	        					<div class="bottom-right-icons">
+	        						<button class="ui circular btn-eye icon button">
+										<img src="images/icons/icon_eye.png" alt="">
+									</button>
+									<button class="ui circular btn-share icon button">
+										<img src="images/icons/icon_share.png" alt="">
+									</button>
+									<button class="ui circular btn-hpacs icon button">
+										<img src="images/icons/icon_hpacs.png" alt="">
+									</button>
+									<button class="ui circular btn-download icon button">
+										<img src="images/icons/icon_download.png" alt="">
+									</button>
+									<button class="ui circular btn-more icon button">
+										<img src="images/icons/icon_more.png" alt="">
+									</button>
+	        					</div>
+	        				</div>
+        					<div class="ui grid content-box">
+        						<div class="row">
+	        						<div class="eight wide column">Patient Name</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        					</div>
+        				</div>
+        			</div>
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item">
+	        				<div class="thumbnail-box">
+	        					<img src="images/view-1.png" alt="">
+	        					<div class="top-left-icons">
+									<img src="images/icons/icon_shared.png" alt="">
+	        					</div>
+	        					<div class="top-right-icons">
+	        						<i class="far fa-check-circle"></i>
+	        					</div>
+	        					<div class="bottom-right-icons">
+	        						<button class="ui circular btn-eye icon button">
+										<img src="images/icons/icon_eye.png" alt="">
+									</button>
+									<button class="ui circular btn-share icon button">
+										<img src="images/icons/icon_share.png" alt="">
+									</button>
+									<button class="ui circular btn-hpacs icon button">
+										<img src="images/icons/icon_hpacs.png" alt="">
+									</button>
+									<button class="ui circular btn-download icon button">
+										<img src="images/icons/icon_download.png" alt="">
+									</button>
+									<button class="ui circular btn-more icon button">
+										<img src="images/icons/icon_more.png" alt="">
+									</button>
+	        					</div>
+	        				</div>
+        					<div class="ui grid content-box">
+        						<div class="row">
+	        						<div class="eight wide column">Patient Name</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item">
+	        				<div class="thumbnail-box width-60">
+	        					<img src="images/icon_folder.png" alt="">
+	        					<div class="top-left-icons">
+									<img src="images/icons/icon_shared.png" alt="">
+	        					</div>
+	        					<div class="top-right-icons">
+	        						<i class="far fa-check-circle"></i>
+	        					</div>
+	        					<div class="bottom-right-icons">
+	        						<button class="ui circular btn-eye icon button">
+										<img src="images/icons/icon_eye.png" alt="">
+									</button>
+									<button class="ui circular btn-share icon button">
+										<img src="images/icons/icon_share.png" alt="">
+									</button>
+									<button class="ui circular btn-hpacs icon button">
+										<img src="images/icons/icon_hpacs.png" alt="">
+									</button>
+									<button class="ui circular btn-download icon button">
+										<img src="images/icons/icon_download.png" alt="">
+									</button>
+									<button class="ui circular btn-more icon button">
+										<img src="images/icons/icon_more.png" alt="">
+									</button>
+	        					</div>
+	        				</div>
+        					<div class="ui grid content-box">
+        						<div class="row">
+	        						<div class="eight wide column">Patient Name</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item">
+	        				<div class="thumbnail-box width-40">
+	        					<img src="images/icon_folder.png" alt="">
+	        					<div class="top-left-icons">
+									<img src="images/icons/icon_shared.png" alt="">
+	        					</div>
+	        					<div class="top-right-icons">
+	        						<i class="far fa-check-circle"></i>
+	        					</div>
+	        					<div class="bottom-right-icons">
+	        						<button class="ui circular btn-eye icon button">
+										<img src="images/icons/icon_eye.png" alt="">
+									</button>
+									<button class="ui circular btn-share icon button">
+										<img src="images/icons/icon_share.png" alt="">
+									</button>
+									<button class="ui circular btn-hpacs icon button">
+										<img src="images/icons/icon_hpacs.png" alt="">
+									</button>
+									<button class="ui circular btn-download icon button">
+										<img src="images/icons/icon_download.png" alt="">
+									</button>
+									<button class="ui circular btn-more icon button">
+										<img src="images/icons/icon_more.png" alt="">
+									</button>
+	        					</div>
+	        				</div>
+        					<div class="ui grid content-box">
+        						<div class="row">
+	        						<div class="eight wide column">Patient Name</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item">
+	        				<div class="thumbnail-box width-60">
+	        					<img src="images/icon_folder.png" alt="">
+	        					<div class="top-left-icons">
+									<img src="images/icons/icon_shared.png" alt="">
+	        					</div>
+	        					<div class="top-right-icons">
+	        						<i class="far fa-check-circle"></i>
+	        					</div>
+	        					<div class="bottom-right-icons">
+	        						<button class="ui circular btn-eye icon button">
+										<img src="images/icons/icon_eye.png" alt="">
+									</button>
+									<button class="ui circular btn-share icon button">
+										<img src="images/icons/icon_share.png" alt="">
+									</button>
+									<button class="ui circular btn-hpacs icon button">
+										<img src="images/icons/icon_hpacs.png" alt="">
+									</button>
+									<button class="ui circular btn-download icon button">
+										<img src="images/icons/icon_download.png" alt="">
+									</button>
+									<button class="ui circular btn-more icon button">
+										<img src="images/icons/icon_more.png" alt="">
+									</button>
+	        					</div>
+	        				</div>
+        					<div class="ui grid content-box">
+        						<div class="row">
+	        						<div class="eight wide column">Patient Name</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+
+        						<div class="row">
+	        						<div class="eight wide column">Lorem ipsum</div>
+	        						<div class="eight wide column">Lorem ipsum</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+
+        			<div class="four wide computer eight wide tablet sixteen wide mobile column">
+        				<div class="item folder-create width-60">
+							<img src="images/icon_folder_plus.png" alt="">
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</body>
 
 </html>
